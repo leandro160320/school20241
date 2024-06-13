@@ -32,7 +32,7 @@ export default async function ListTeacher() {
     "use server"
     const id =formData.get("id") as string;
     const response = await fetch ("https://server20241-liart.vercel.app/teachers/" +id, {method: 'DELETE'})
-    revalidatePath("/admin/teacher")
+    revalidatePath("/admin/teachers")
   }
 
   return (
